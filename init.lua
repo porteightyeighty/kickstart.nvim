@@ -615,7 +615,7 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        apex_ls = {},
+        -- apex_ls = {},
         lwc_ls = {},
         cssls = {},
         -- clangd = {},
@@ -985,6 +985,6 @@ require('lazy').setup({
     },
   },
 })
-
+vim.cmd 'au BufNewFile,BufRead *.cls :setl ft=apexcode'
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
