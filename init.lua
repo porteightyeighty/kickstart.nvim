@@ -618,6 +618,7 @@ require('lazy').setup({
       local servers = {
         apex_ls = {},
         lwc_ls = {},
+        cssls = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
