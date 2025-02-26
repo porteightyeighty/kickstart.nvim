@@ -71,7 +71,7 @@ return {
         -- See :help oil-actions for a list of all available actions
         keymaps = {
           ['g?'] = { 'actions.show_help', mode = 'n' },
-          ['<CR>'] = 'actions.select',
+          ['<Space>'] = 'actions.select',
           ['<C-s>'] = { 'actions.select', opts = { vertical = true } },
           ['<C-h>'] = { 'actions.select', opts = { horizontal = true } },
           ['<C-t>'] = { 'actions.select', opts = { tab = true } },
