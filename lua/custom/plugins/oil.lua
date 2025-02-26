@@ -76,7 +76,7 @@ return {
           ['<C-h>'] = { 'actions.select', opts = { horizontal = true } },
           ['<C-t>'] = { 'actions.select', opts = { tab = true } },
           ['<C-p>'] = 'actions.preview',
-          ['<C-c>'] = { 'actions.close', mode = 'n' },
+          ['q'] = { 'actions.close', mode = 'n' },
           ['<C-l>'] = 'actions.refresh',
           ['-'] = { 'actions.parent', mode = 'n' },
           ['_'] = { 'actions.open_cwd', mode = 'n' },
@@ -212,6 +212,8 @@ return {
           border = 'rounded',
         },
       }
+      local Oil = require 'oil'
+      vim.keymap.set('n', '<Bslash>', Oil.open_float, { desc = 'open oil' })
     end,
   },
 }
