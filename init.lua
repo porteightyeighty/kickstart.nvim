@@ -601,13 +601,13 @@ require('lazy').setup({
         end,
         desc = 'Highlights',
       },
-      -- {
-      --   '<leader>si',
-      --   function()
-      --     Snacks.picker.icons()
-      --   end,
-      --   desc = 'Icons',
-      -- },
+      {
+        '<leader>si',
+        function()
+          Snacks.picker.icons()
+        end,
+        desc = 'Icons',
+      },
       {
         '<leader>sj',
         function()
