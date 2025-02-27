@@ -1203,19 +1203,13 @@ require('lazy').setup({
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
             require('lspconfig')[server_name].setup(server)
           end,
-<<<<<<< HEAD
+
           jdtls = function()
             require('lspconfig').jdtls.setup {
               -- Your custom nvim-java configuration goes here
             }
           end,
-=======
-          -- jdtls = function()
-          --   require('lspconfig').jdtls.setup {
-          --     -- Your custom nvim-java configuration goes here
-          --   }
-          -- end,
->>>>>>> snacks
+
         },
       }
     end,
