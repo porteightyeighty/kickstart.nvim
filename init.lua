@@ -403,13 +403,6 @@ require('lazy').setup({
         desc = 'Buffers',
       },
       {
-        '<leader>/',
-        function()
-          Snacks.picker.grep()
-        end,
-        desc = 'Grep',
-      },
-      {
         '<leader>:',
         function()
           Snacks.picker.command_history()
@@ -532,7 +525,7 @@ require('lazy').setup({
         desc = 'Buffer Lines',
       },
       {
-        '<leader>sB',
+        '<leader>/',
         function()
           Snacks.picker.grep_buffers()
         end,
