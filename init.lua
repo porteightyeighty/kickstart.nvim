@@ -229,8 +229,10 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  -- 'morhetz/gruvbox',
-  'nvim-java/nvim-java',
+  {
+    'nvim-java/nvim-java',
+    opts = {},
+  },
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
@@ -675,10 +677,6 @@ require('lazy').setup({
             require('lspconfig')[server_name].setup(server)
           end,
           jdtls = function()
-            require('java').setup {
-              -- Your custom jdtls settings goes here
-            }
-
             require('lspconfig').jdtls.setup {
               -- Your custom nvim-java configuration goes here
             }
