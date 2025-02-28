@@ -225,6 +225,7 @@ vim.opt.rtp:prepend(lazypath)
 --
 --  To update plugins you can run
 --    :Lazy update
+
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
@@ -1445,6 +1446,20 @@ require('lazy').setup({
   },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    dependencies = {
+      {
+        'windwp/nvim-ts-autotag',
+        config = function()
+          require('nvim-ts-autotag').setup {
+            opts = {
+              enable_close = true, -- Auto close tags
+              enable_rename = true, -- Auto rename pairs of tags
+              enable_close_on_slash = true, -- Auto close on trailing </
+            },
+          }
+        end,
+      },
+    },
     build = ':TSUpdate',
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
